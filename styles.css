@@ -1,0 +1,50 @@
+/* Sidebar styles */
+.sidebar {
+    background-color: #f8f9fa;
+    padding: 20px;
+    height: 100vh;
+    border-right: 1px solid #dee2e6;
+  }
+  
+  .sidebar-item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .sidebar-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar-item a:hover,
+  .sidebar-item a:focus {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  /* Hamburger menu icon */
+  .sidebar-item:first-child {
+    margin-bottom: 30px;
+  }
+  
+  /* Accessibility icon */
+  .sidebar-item:last-child {
+    margin-top: 30px;
+  }
+  
+  /* Remove default focus outline and add custom one */
+  .sidebar-item a:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,86,179,0.5);
+  }
