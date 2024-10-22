@@ -4,59 +4,238 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ejemplo de nueva página para GOB.mx</title>
-    <!-- CSS -->
-    <link href="/favicon.ico" rel="shortcut icon" />
+    <title>CETI</title>
+    <link href="images/favicon.ico" rel="shortcut icon" />
     <link
       href="https://framework-gb.cdn.gob.mx/assets/styles/main.css"
       rel="stylesheet"
     />
-    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .main-content {
+        padding: 2rem;
+      }
+      .section {
+        margin-bottom: 3rem;
+      }
+      .card {
+        padding: 1.5rem;
+        background: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+      }
+      .hero-section {
+        background: #f8f9fa;
+        padding: 3rem 1.5rem;
+        margin-bottom: 3rem;
+        border-radius: 0.5rem;
+      }
+    </style>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3 p-0">
-          <div class="sidebar">
-            <div class="sidebar-item">
-              <img src="" alt="Menu" />
-            </div>
-            <div class="sidebar-item">
-              <a href="#nosotros">
-                <img src="images/estrella.png" alt="Star" />
-                <span>Nosotros</span>
-              </a>
-            </div>
-            <div class="sidebar-item">
-              <a href="#oferta-educativa">
-                <img src="images/estrella.png" alt="Star" />
-                <span>Oferta educativa</span>
-              </a>
-            </div>
-            <div class="sidebar-item">
-              <a href="#docentes">
-                <img src="images/estrella.png" alt="Star" />
-                <span>Docentes</span>
-              </a>
-            </div>
-            <div class="sidebar-item">
-              <a href="#ley-datos">
-                <img src="images/estrella.png" alt="Star" />
-                <span>Ley de uso de datos privados</span>
-              </a>
-            </div>
-            <div class="sidebar-item">
-              <img src="path/to/accessibility-icon.png" alt="Accessibility" />
-            </div>
+    <div class="flex h-screen bg-gray-100">
+      <!-- Menú lateral -->
+      <div
+        class="flex flex-col items-center w-40 h-full overflow-hidden text-indigo-300 bg-indigo-900"
+      >
+        <a class="flex items-center w-full px-3 mt-3" href="#">
+          <svg
+            class="w-8 h-8 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z"
+            />
+          </svg>
+          <span class="ml-2 text-sm font-bold">CETI</span>
+        </a>
+        <div class="w-full px-2">
+          <div
+            class="flex flex-col items-center w-full mt-3 border-t border-gray-700"
+          >
+            <a
+              class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
+              href="#nosotros"
+            >
+              <svg
+                class="w-6 h-6 stroke-current"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+              <span class="ml-2 text-sm font-medium">Nosotros</span>
+            </a>
+            <a
+              class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
+              href="#oferta-educativa"
+            >
+              <svg
+                class="w-6 h-6 stroke-current"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+              </svg>
+              <span class="ml-2 text-sm font-medium">Oferta Educativa</span>
+            </a>
+            <a
+              class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-indigo-700"
+              href="#docentes"
+            >
+              <svg
+                class="w-6 h-6 stroke-current"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                />
+              </svg>
+              <span class="ml-2 text-sm font-medium">Docentes</span>
+            </a>
           </div>
         </div>
-        <div class="col-md-9"></div>
+        <a
+          class="flex items-center justify-center w-full h-16 mt-auto bg-indigo-800 hover:bg-indigo-700"
+          href="#ley-datos"
+        >
+          <svg
+            class="w-6 h-6 stroke-current"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
+            />
+          </svg>
+          <span class="ml-2 text-sm font-medium">Aviso Legal</span>
+        </a>
+      </div>
+
+      <!-- Contenido principal -->
+      <div class="flex-1 overflow-y-auto">
+        <div class="main-content">
+          <section class="hero-section">
+            <h1>Centro de Enseñanza Técnica Industrial</h1>
+            <p class="lead">
+              Formando profesionales técnicos de excelencia desde 1968
+            </p>
+          </section>
+
+          <section id="nosotros" class="section">
+            <h2>Nosotros</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="card">
+                <h3>Misión</h3>
+                <p>
+                  Formar profesionales líderes en el área tecnológica a través
+                  de la excelencia académica.
+                </p>
+              </div>
+              <div class="card">
+                <h3>Visión</h3>
+                <p>
+                  Ser una institución líder en la formación tecnológica en
+                  México.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="oferta-educativa" class="section">
+            <h2>Oferta Educativa</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="card">
+                <h3>Tecnólogo</h3>
+                <ul class="list-disc pl-5">
+                  <li>Desarrollo de Software</li>
+                  <li>Mecánica Automotriz</li>
+                  <li>Control Automático</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Ingeniería</h3>
+                <ul class="list-disc pl-5">
+                  <li>Desarrollo de Software</li>
+                  <li>Mecatrónica</li>
+                  <li>Industrial</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Posgrados</h3>
+                <ul class="list-disc pl-5">
+                  <li>Maestría en Sistemas Computacionales</li>
+                  <li>Maestría en Ingeniería Industrial</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="docentes" class="section">
+            <h2>Docentes</h2>
+            <div class="card">
+              <h3>Portal Docente</h3>
+              <p>Accede a recursos importantes:</p>
+              <ul class="list-disc pl-5">
+                <li>Sistema de calificaciones</li>
+                <li>Recursos didácticos</li>
+                <li>Calendario académico</li>
+                <li>Desarrollo profesional</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="ley-datos" class="section">
+            <h2>Ley de Uso de Datos Privados</h2>
+            <div class="card">
+              <p>
+                El CETI está comprometido con la protección de datos personales
+                de nuestra comunidad educativa, en cumplimiento con la Ley
+                Federal de Protección de Datos Personales en Posesión de los
+                Particulares.
+              </p>
+              <button
+                class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700"
+              >
+                Ver política completa
+              </button>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
 
     <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
-    <script>
-      $gmx(document).ready(function () {});
-    </script>
   </body>
 </html>
