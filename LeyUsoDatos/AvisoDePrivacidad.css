@@ -1,0 +1,162 @@
+/* styles.css */
+:root {
+    --primary-color: #6B46C1;
+    --text-color: #333;
+    --link-color: #2563EB;
+    --border-color: #E5E7EB;
+    --background-color: #F9FAFB;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.main-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.notice-text, .rights-text, .requirements-text {
+    margin-bottom: 1.5rem;
+}
+
+.options-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.options-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.options-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.sidebar {
+    align-self: start;
+}
+
+.info-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.banner {
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.banner img {
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+.banner h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.dates {
+    padding: 1.5rem;
+}
+
+.dates p {
+    margin: 0.5rem 0;
+}
+
+/* Estilos del navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+.navbar-nav > li > a {
+    color: white;
+    padding: 0.75rem 1.25rem;
+    display: block;
+}
+
+.navbar-nav > li > a:hover {
+    background-color: #563d7c;
+    color: white;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+    
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .navbar-nav > li > a {
+        padding: 0.5rem 1rem;
+    }
+}
